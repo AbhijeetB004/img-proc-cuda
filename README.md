@@ -53,32 +53,22 @@ sudo apt-get install libopencv-dev
 pip install -r requirements.txt
 ```
 
-## Compilation
+## Usage
 
-### Automatic (Recommended)
-The provided Jupyter Notebooks automatically handle compilation steps (calling `cmake` and `make`) to adjust kernel parameters like Block Size dynamically.
+### 1. Compilation
+The provided Jupyter Notebooks automatically handle compilation steps (calling `cmake` and `make`) to adjust kernel parameters like Block Size dynamically. You do not need to build the project manually.
 
-### Manual (Verification)
-To verify your environment is set up correctly, you can try building manually:
+### 2. Input Data
+Place high-resolution test images in the `images/` directory (already provided):
+*   `input.jpg`: Clean reference image.
+*   `input_noisy.jpg`: Noisy variant for denoising verification.
+
+### 3. Benchmarking
+Launch the analysis suite via Jupyter:
 ```bash
-mkdir -p src/gpu/build
-cd src/gpu/build
-cmake ..
-make
+jupyter notebook
 ```
-If this succeeds, your environment is ready for benchmarking.
-
-2.  **Input Data**:
-    Place high-resolution test images in the `images/` directory (already provided ):
-    *   `input.jpg`: Clean reference image.
-    *   `input_noisy.jpg`: Noisy variant for denoising verification.
-
-3.  **Benchmarking**:
-    Launch the analysis suite via Jupyter:
-    ```bash
-    jupyter notebook
-    ```
-    Execute the notebooks in `notebooks/` to compile the specific kernels and generate performance graphs.
+Execute the notebooks in `notebooks/` to compile the specific kernels and generate performance graphs.
 
 ## Benchmarking Metrics
 
