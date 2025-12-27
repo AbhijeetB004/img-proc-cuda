@@ -1,0 +1,33 @@
+# Build directories
+build/
+bin/
+lib/
+*.o
+*.a
+*.so
+*.exe
+*.dll
+*.iobj
+*.ipdb
+*.pdb
+
+# Generated Analysis Output
+analysis_output/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+venv/
+env/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
